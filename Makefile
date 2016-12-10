@@ -19,10 +19,10 @@ run:
 	docker run --rm --name $(NAME) $(PORTS) $(VOLUMES) $(ENV) $(REPO):$(VERSION)
 
 start:
-	docker run -d --name $(NAME)-$(INSTANCE) $(PORTS) $(VOLUMES) $(ENV) $(REPO):$(VERSION)
+	docker run -d --name $(NAME) $(PORTS) $(VOLUMES) $(ENV) $(REPO):$(VERSION)
 
 stop:
-	docker stop $(NAME)-
+	docker stop $(NAME)
 
 rm:
 	docker rm $(NAME)
